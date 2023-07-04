@@ -1,0 +1,40 @@
+// Homework Exercises
+
+// 1. For each of these values, what type will the TypeScript compiler infer?
+let a = 118;
+// A: number
+
+let b = 'Thieves';
+// A: string
+
+let c = [true, false, false];
+// A: boolean[]
+
+let d = {age: number};
+// A: {age: number} --> if 'number' in the question represents an actual number
+
+let e = [3]
+// A: [number]
+
+let f;
+// A: any
+
+let g = []
+// A: (string | number)[]
+
+
+// 2. What are the compilation errors in each of the following code snippets?
+let song: {
+    title: string,
+    releaseYear: number,
+} = {
+    title: 'Lose Yourself'
+};
+// A: colon next to song should be removed, missing releaseYear in object's actual arguments giving
+
+let prices = [100, 200, 300];
+prices[0] = '$100';
+// A: code should include prices: (number | string)[] so index 0 can be replaced with string - '$100'
+
+function myFunc(a: number, b: number): number {}
+// A: maybe it needs a 'let' or 'const' at the beginning
